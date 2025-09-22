@@ -106,9 +106,10 @@ header p.subtitle {
 .profile-pic {
   border-radius: 50%;
   object-fit: cover;
-  max-height: 150px;
-  aspect-ratio: 1 / 1;
+  width: 150px;   /* fixed width */
+  height: 150px;  /* fixed height */
 }
+
 
 .header-text {
   display: flex;
@@ -119,6 +120,10 @@ header p.subtitle {
 
 /* Responsive for small screens */
 @media (max-width: 768px) {
+  .profile-pic {
+  width: 120px;
+  height: 120px;
+}
   .header-content {
     flex-direction: column;
     text-align: center;
@@ -127,7 +132,6 @@ header p.subtitle {
   .profile-pic {
     max-height: 120px;
   }
-
   .header-text {
     text-align: center;
   }
