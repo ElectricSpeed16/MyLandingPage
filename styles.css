@@ -74,23 +74,65 @@ body {
 }
 
 
-/* Header */
+/* ===== HEADER STYLES (No Box, Name Colored) ===== */
 header {
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 20px;
+  background: none; /* clean, no gradient */
+  color: black;
 }
 
 header h1 {
-  font-size: 3rem;
   margin: 0;
-  color: #ff5e57;
+  font-size: 2.5em;
+  color: #ff5e57; /* highlight name */
 }
 
-header .subtitle {
-  font-size: 1.3rem;
-  color: #666;
-  margin-top: 0.5rem;
+header p.subtitle {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-weight: 300;
+  color: black; /* keep subtitle black */
 }
+
+/* Layout for image + text */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  object-fit: cover;
+  max-height: 150px;
+  aspect-ratio: 1 / 1;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    max-height: 120px;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+}
+
 
 /* Sections */
 .section {
